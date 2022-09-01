@@ -1,0 +1,85 @@
+// import { useState, useEffect} from "react";
+import BloggerList from "./BloggerList";
+import useFetch from "./useFetch";
+
+const Home = () => {
+  const {
+    data: blogs,
+    isLoading,
+    error,
+  } = useFetch("http://localhost:8000/blogs");
+  // const [blogs, setBlogs] = useState(null);
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [error, setError] = useState(null);
+
+  // const blogDelete = (id) => {
+  //   const newBlogs = blogs.filter((blog) => blog.id !== id);
+  //   setBlogs(newBlogs);
+  // };
+
+  //  setting the timer for real server case study
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     fetch("http://localhost:8000/blogs")
+  //       .then((res) => {
+  //         if (!res.ok) {
+  //           throw Error("Unable to get the Data from the resources");
+  //         }
+  //         return res.json();
+  //       })
+  //       .then((data) => {
+  //         setBlogs(data);
+  //         setIsLoading(false);
+  //         setError(null);
+  //       })
+  //       .catch((err) => {
+  //         setIsLoading(false);
+  //         setError(err.message);
+  //       });
+  //   }, 2000);
+  // }, []);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:8000/blogs")
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       setBlogs(data);
+  //       // setIsLoading(false);
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //   console.log("Trying Out Use Effect");
+  //   console.log(blogs);
+  // }, []);
+
+  return (
+    // <div className="home">
+    //   {blogs && (
+    //     <BloggerList blogs={blogs} title="All Blogs" blogDelete={blogDelete} />
+    //   )}
+    <div className="home">
+      {error && <div> {error} </div>}
+      {isLoading && <div> Loading...</div>}
+      {blogs && <BloggerList blogs={blogs} title="All Blogs" />}
+
+      {blogs && (
+        <BloggerList
+          blogs={blogs.filter((blog) => blog.author === "Pelumi Olukayode")}
+          title="Pelumi's Blog"
+        />
+      )}
+
+      {blogs && (
+        <BloggerList
+          blogs={blogs.filter((blog) => blog.author === "Oyindamola Kushimo")}
+          title="Oyindamola's Blog"
+        />
+      )}
+    </div>
+  );
+};
+
+export default Home;

@@ -1,0 +1,44 @@
+{
+ "blogs": [
+  {"title": "AltSchool Guide",
+"body": "Lorem 50",
+"author": "Pelumi Olukayode",
+"id": 1
+},
+{
+"title": "AltSchool Tracks",
+"body": "Lorem 50",
+"author": "Oyindamola Kushimo",
+"id": 2
+},
+{
+"title": "AltSchool Student Experience",
+"body": "Lorem 50",
+"author": "Oyindamola Kushimo",
+"id": 3
+},
+{
+"title": "AltSchool Student Tour Experience",
+"body": "Lorem ipsum",
+"author": "Justice",
+"id": 4
+},
+{
+"title": "AltSchool Hackathon Experience",
+"body": "Lorem ipsum",
+"author": "Timothy Achonu",
+"id": 5
+},
+{
+"title": "Town Hall Meeting Highlights",
+"body": "Lorem ipsum",
+"author": "Pelumi Olukayode",
+"id": 6
+},
+{
+"title": "AltSchool Fun Friday",
+"body": "Lorem 50",
+"author": "Zainab Tijani",
+"id": 7
+}
+]}

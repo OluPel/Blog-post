@@ -1,16 +1,18 @@
-import "./App.css";
 import React from "react";
+import Navbar from "./Navbar";
+import Home from "./components/Home";
+import NewsLetter from "./components/NewsLetter";
+// import BloggersList from "./components/BloggerList"
 
-function App() {
-  const title = "Welcome to the new blog post"
+const App = () => {
   return (
-  <div className="App">
-    <div className="content">
-      <h1>{title}</h1>
+    <div className="App">
+      <Navbar />
+      <Home />
+      <NewsLetter />
+      {/* <BloggersList /> */}
     </div>
-
-  </div>
   );
-}
+};
 
 export default App;
