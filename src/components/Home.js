@@ -1,5 +1,5 @@
 // import { useState, useEffect} from "react";
-import BloggerList from "./BloggerList";
+import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 
 const Home = () => {
@@ -13,21 +13,8 @@ const Home = () => {
     <div className="home">
       {error && <div> {error} </div>}
       {isLoading && <div> Loading...</div>}
-      {blogs && <BloggerList blogs={blogs} title="All Blogs" />}
+      {blogs && <BlogList blogs={blogs} title="All Blogs" />}
 
-      {/* {blogs && (
-        <BloggerList
-          blogs={blogs.filter((blog) => blog.author === "Pelumi Olukayode")}
-          title="Pelumi's Blog"
-        />
-      )}
-
-      {blogs && (
-        <BloggerList
-          blogs={blogs.filter((blog) => blog.author === "Oyindamola Kushimo")}
-          title="Oyindamola's Blog"
-        />
-      )} */}
     </div>
   );
 };
