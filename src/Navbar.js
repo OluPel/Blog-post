@@ -23,16 +23,16 @@ const Navbar = () => {
 
       <div className="links">
 
-      <Link to=  { HomeLink}target="_blank" onClick={clickHome}>
+      <Link to=  {HomeLink}target="_blank" onClick={clickHome}>
           AltSchool Home
         </Link>
 
-        <Link
-          to="/https://thealtschool.com/my-account-2/#login"
-          onClick={clickLogin}
-        >
+        <Link to=  {Loginlink}target="_blank" onClick={clickLogin}>
           LMS Log in
+
         </Link>
+
+        
 
         <Link to="/NewsLetter">News-Letter</Link>
 
